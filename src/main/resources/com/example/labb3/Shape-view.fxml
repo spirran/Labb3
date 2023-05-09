@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labb3.ShapeViewController">
+   <center>
+      <Canvas fx:id="canvas" height="556.0" onMouseClicked="#onCanvasClicked" width="800.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <HBox prefHeight="43.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <Button fx:id="circleButton" mnemonicParsing="false" onAction="#circleButton" prefHeight="40.0" prefWidth="80.0" text="Circle" />
+         <Button mnemonicParsing="false" onAction="#rectangleButton" prefHeight="40.0" prefWidth="80.0" text="Rectangle">
+            <HBox.margin>
+               <Insets left="5.0" />
+            </HBox.margin>
+         </Button>
+         <ColorPicker fx:id="colorPicker" prefHeight="40.0" prefWidth="120.0">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+            <value>
+               <Color red="0.35087719559669495" green="0.36549708247184753" blue="0.7894737124443054" />
+            </value>
+         </ColorPicker>
+         <Button fx:id="undoButton" disable="true" mnemonicParsing="false" onAction="#undoButton" prefHeight="40.0" prefWidth="80.0" text="Undo">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#resetButton" prefHeight="40.0" prefWidth="80.0" text="RESET">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin>
+         </Button>
+         <TextField fx:id="sizeField" prefHeight="40.0" prefWidth="149.0" text="10">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </TextField>
+         <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" text="Export SVG" onAction="#exportSVGFile">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+   </top>
+</BorderPane>
